@@ -11,9 +11,3 @@ You can use it in your code like a React component with the jsx tag:
     {children}
 </ProductName>
 ```
-
-| Prop name | Type | Description                       
-| - | - | - | - |
-| `className` | `String` | Class name
-| `title` | `String` | Title
-| `children` | `Node` | Children

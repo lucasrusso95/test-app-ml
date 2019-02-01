@@ -11,10 +11,3 @@ You can use it in your code like a React component with the jsx tag:
     title={title}
 /> 
 ```
-
-| Prop name | Type | Description                       
-| - | - | - | - |
-| `className` | `String` | Class name
-| `url` | `String` | Image url   
-| `width` | `String` | Image width  
-| `title` | `String` | Image title   
