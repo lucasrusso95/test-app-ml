@@ -38,3 +38,8 @@ Obs: Nao consegui fazer funcionar a tabela de props que funciona no BitBucket :(
 - [ProductPrice](https://github.com/lucasrusso95/test-app-ml/blob/master/client/src/components/ProductPrice/README.md)
 - [ProductDescription](https://github.com/lucasrusso95/test-app-ml/blob/master/client/src/components/ProductDescription/README.md)
 - [BuyButton](https://github.com/lucasrusso95/test-app-ml/blob/master/client/src/components/BuyButton/README.md)
+
+## Contato
+
+- E-mail: lucasrusso95@gmail.com
+- Telefone: (11) 97641-9844
