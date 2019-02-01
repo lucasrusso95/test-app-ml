@@ -19,6 +19,10 @@ Após a instalacao dos pacotes NPM, basta acessar as pastas /client e /server co
 npm start
 ```
 
+- Aplicacao: [http://localhost:3000/](http://localhost:3000/)
+
+O servidor está na porta 3001
+
 Obs: Deixei a pasta que recebi com o teste proposto na pasta /specifications.
 
 ## Especificacao dos Componentes
