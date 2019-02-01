@@ -1,0 +1,8 @@
+.header {
+    background: $first-color;
+    padding: 10px 0;
+    .shell {
+        display: flex;
+        justify-content: space-between;
+    }
+}

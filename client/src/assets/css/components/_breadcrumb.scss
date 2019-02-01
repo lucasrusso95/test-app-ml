@@ -1,0 +1,30 @@
+.breadcrumb {
+    font-size: 14px;
+    color: $fourth-color;
+    margin: 16px 0;
+    @include e('list') {
+        display: flex;
+        @include e('item') {
+            &::after {
+                content: "";
+                position: relative;
+                top: -2px;
+                transform: rotate(-45deg);
+                display: inline-block;
+                font-size: 0;
+                line-height: 0;
+                border: solid #999;
+                border-width: 0 1px 1px 0;
+                background: none;
+                margin: 0 10px 0 5px;
+                padding: 3px;
+            }
+            &:last-child {
+                font-weight: bold;
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}

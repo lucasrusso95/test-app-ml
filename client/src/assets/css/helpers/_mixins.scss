@@ -1,0 +1,15 @@
+// Using BEM Methodology — Block Element Modifier (http://getbem.com/introduction/)
+
+// Element mixin
+@mixin e($element) {
+    &__#{$element} {
+        @content;
+    }
+}
+
+// Modifier mixin
+@mixin m($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}

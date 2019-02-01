@@ -1,0 +1,21 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: $fifth-color;
+    font-family: $primary-font;
+}
+
+.main {
+    margin-bottom: 50px;
+}
+
+.shell {
+    max-width: 980px;
+    margin: 0 auto;
+    @media #{$mobile-devices} {
+        padding: 0 10px;
+    }
+}
