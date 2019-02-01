@@ -63,7 +63,9 @@ const associateProducts = async (query, limit) => {
             categories 
         };
 
-        const itemsMap = results.slice(0, limit).map(prepareItem);
+        let resultsArray = (limit) ? results.slice(0, limit) : results;
+
+        const itemsMap = resultsArray.slice(0, limit).map(prepareItem);
 
         return Promise.all(itemsMap).then((items) => {
             jsonFormatted.items = items;
@@ -71,7 +73,7 @@ const associateProducts = async (query, limit) => {
         });
 
     } catch(err){
-        console.error(err) 
+        throw err;
     }
 }
 
@@ -94,7 +96,7 @@ const associateProduct = async (id) => {
         return { author, item };
 
     } catch(err){
-        console.error(err) 
+        throw err;
     }
 }
 
@@ -102,7 +104,17 @@ router.get('/items', (req, res) => {
 
     const { q: query, limit } = req.query;
 
-    associateProducts(query, limit).then(response => res.send(response));
+    if(query) {
+        associateProducts(query, limit)
+        .then(response => res.send(response))
+        .catch(err => {
+            res.status(404);
+            res.json({message: `Not found.`});
+        });
+    } else {
+        res.status(500);
+        res.json({message: `INTERNAL SERVER ERROR`});
+    }
     
 });
 
@@ -110,7 +122,12 @@ router.get('/items/:id', (req, res) => {
     
     const { id } = req.params;
 
-    associateProduct(id).then(response => res.send(response));
+    associateProduct(id)
+        .then(response => res.send(response))
+        .catch(err => {
+            res.status(404);
+            res.json({message: `Item with id ${id} not found.`});
+        });
 
 });
 
